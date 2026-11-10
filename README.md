@@ -6,7 +6,7 @@
 
 ## 下载
 
-[![构建状态](https://builds.guizhanss.com/api/badge/SlimefunGuguProject/DynaTech/master/latest)](https://builds.guizhanss.com/SlimefunGuguProject/DynaTech)
+[下载 DynaTech](https://resources.guizhanss.com/plugin/DynaTech)
 
 ## 机器
 
