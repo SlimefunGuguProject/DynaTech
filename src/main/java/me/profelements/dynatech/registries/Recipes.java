@@ -723,11 +723,12 @@ public class Recipes {
             .setKey(Keys.GROWTH_CHAMBER_END.key())
             .setRecipeType(RecipeType.ENHANCED_CRAFTING_TABLE)
             .setInput(new ItemStack[] {
-                    SlimefunItems.STEEL_PLATE, Items.GROWTH_CHAMBER_END.stack(), SlimefunItems.STEEL_PLATE,
-                    new ItemStack(Material.PURPUR_PILLAR), new ItemStack(Material.PURPLE_STAINED_GLASS),
-                    new ItemStack(Material.END_STONE_BRICKS),
-                    SlimefunItems.STEEL_PLATE, Items.GROWTH_CHAMBER_END.stack(), SlimefunItems.STEEL_PLATE
-
+                    SlimefunItems.HARDENED_GLASS, new ItemStack(Material.MAGENTA_STAINED_GLASS),
+                    SlimefunItems.HARDENED_GLASS,
+                    new ItemStack(Material.PURPUR_BLOCK), new ItemStack(Material.CHORUS_FLOWER),
+                    new ItemStack(Material.END_STONE),
+                    Items.STAINLESS_STEEL_INGOT.stack(), Items.GROWTH_CHAMBER.stack(),
+                    Items.STAINLESS_STEEL_INGOT.stack()
             })
             .setOutput(Items.GROWTH_CHAMBER_END.stack())
             .register();
