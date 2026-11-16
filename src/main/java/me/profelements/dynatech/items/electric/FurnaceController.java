@@ -16,8 +16,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
-import io.github.thebusybiscuit.slimefun4.libraries.paperlib.features.blockstatesnapshot.BlockStateSnapshotResult;
 import me.profelements.dynatech.items.abstracts.AbstractElectricTicker;
 
 public class FurnaceController extends AbstractElectricTicker {
@@ -48,15 +46,12 @@ public class FurnaceController extends AbstractElectricTicker {
 
             Block relBlock = b.getRelative(face);
             if (getMachines().contains(relBlock.getType())) { 
-                BlockStateSnapshotResult result = PaperLib.getBlockState(relBlock, false);
-                BlockState state = result.getState();
+                BlockState state = relBlock.getState();
                 
                 if (state instanceof Furnace furnace && furnace.getCookTimeTotal() > 0) {
                     furnace.setBurnTime((short) 1600);
 
-                    if (result.isSnapshot()) {
-                        state.update(true, true);
-                    }
+                    state.update(true, true);
                 }
             }
         }
